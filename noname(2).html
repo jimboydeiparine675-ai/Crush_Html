@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hi Crush 💖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffe6f0;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #ff4d88;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ff66b2;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #cccccc;
+      color: black;
+      position: absolute;
+    }
+
+    #gift {
+      font-size: 3em;
+      margin-top: 30px;
+      display: none;
+    }
+
+    #message {
+      font-size: 1.8em;
+      color: #ff3399;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Do you like me? 😳</h1>
+
+  <button id="yesBtn">Yes 💗</button>
+  <button id="noBtn">No 😅</button>
+
+  <div id="message"></div>
+  <div id="gift">🎁💖</div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const message = document.getElementById("message");
+    const gift = document.getElementById("gift");
+
+    // Move "No" button when hovered
+    noBtn.addEventListener("mouseover", () => {
+      const i = Math.floor(Math.random() * window.innerHeight * 0.8);
+      const j = Math.floor(Math.random() * window.innerWidth * 0.8);
+      noBtn.style.top = i + "px";
+      noBtn.style.left = j + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      message.textContent = "Yieee crush ko niya! 😍";
+      gift.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
